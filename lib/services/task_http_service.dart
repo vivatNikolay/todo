@@ -30,7 +30,6 @@ class TaskHttpService {
     if (res.statusCode == 201) {
       return jsonDecode(res.body)['id'];
     } else {
-      print(res.statusCode);
       throw "post task failed";
     }
   }
@@ -44,7 +43,6 @@ class TaskHttpService {
     if (res.statusCode == 200) {
       return jsonDecode(res.body)['id'];
     } else {
-      print(res.statusCode);
       throw "patch task failed";
     }
   }
@@ -55,7 +53,6 @@ class TaskHttpService {
     if (res.statusCode == 204) {
       return true;
     } else {
-      print(res.statusCode);
       throw "delete task failed";
     }
   }
